@@ -33,7 +33,7 @@ type GLTFResult = GLTF & {
     Truck1: THREE.Mesh;
     Truck2: THREE.Mesh;
   };
-  materials: {};
+  materials: object;
 };
 
 export function Skateboard({
@@ -116,7 +116,7 @@ export function Skateboard({
         roughness: 0.3, // lower this value the  shinner and smoother it is
       }),
     [boltColor]
-  );
+);
   //truck material:
   // using the normal map for the bumpyfeel. basically handling how the light hits it,normalmap-online page shows nicely how it works kinds
   const metalNormal = useTexture("/skateboard/metal-normal.avif");
@@ -134,7 +134,7 @@ export function Skateboard({
         metalness: 0.8,
         roughness: 0.25, // lower this value the  shinner and smoother it is
       }),
-    [truckColor]
+    [truckColor, metalNormal]
   );
 
   // deck material:
