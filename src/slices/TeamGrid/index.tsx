@@ -28,11 +28,11 @@ const TeamGrid: FC<TeamGridProps> = async ({
       <div className="grid grid-cols-1 gap-8 md:grid-cols-4 ">
         {skaters.map((skater, index) => (
           <React.Fragment key={index}>
-            {skater.data.first_name && (
+            {skater.data.first_name ? (
               <SlideIn>
                 <Skater index={index} skater={skater} />
               </SlideIn>
-            )}
+            ) : null}
           </React.Fragment>
         ))}
       </div>

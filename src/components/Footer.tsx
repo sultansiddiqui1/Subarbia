@@ -32,11 +32,16 @@ export async function Footer() {
       {/* list of links */}
       <Bounded as="nav">
         <ul className="flex flex-wrap justify-center gap-8 ~text-lg/xl">
-          {settings.data.navigation.map((item) => (
-            <li key={item.link.text} className="hover:underline">
-              <PrismicNextLink field={item.link} />
-            </li>
-          ))}
+          {Array.isArray(settings.data.navigation) &&
+          settings.data.navigation.length > 0 ? (
+            settings.data.navigation.map((item) => (
+              <li key={item.link.text} className="hover:underline">
+                <PrismicNextLink field={item.link} />
+              </li>
+            ))
+          ) : (
+            <></> // fallback: renders nothing but satisfies ReactNode
+          )}
         </ul>
       </Bounded>
     </footer>

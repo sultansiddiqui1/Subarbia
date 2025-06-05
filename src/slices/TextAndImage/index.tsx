@@ -60,7 +60,7 @@ const TextAndImage: FC<TextAndImageProps> = ({ slice, index }) => {
             field={slice.primary.button}
             color={theme === "Lime" ? "orange" : "lime"}
           >
-            {slice.primary.button.text}
+            {slice.primary.button.text ?? "click"}
           </ButtonLink>
         </div>
         <ParallaxImage
