@@ -7,7 +7,6 @@ import {
 } from "@prismicio/react";
 
 import { Bounded } from "@/components/Bounded";
-import { PrismicNextLink } from "@prismicio/next";
 import { Heading } from "@/components/Heading";
 import { SkateBoardProduct } from "./SkateBoardProduct";
 import { SlideIn } from "@/components/SlideIn";

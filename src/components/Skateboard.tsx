@@ -46,9 +46,7 @@ export function Skateboard({
   constantWheelSpin = false,
   pose = "upright",
 }: SkateboardProps) {
-  const { nodes, materials } = useGLTF(
-    "/skateboard.gltf"
-  ) as unknown as GLTFResult;
+  const { nodes } = useGLTF("/skateboard.gltf") as unknown as GLTFResult;
 
   const wheelRefs = useRef<THREE.Object3D[]>([]);
 
@@ -116,7 +114,7 @@ export function Skateboard({
         roughness: 0.3, // lower this value the  shinner and smoother it is
       }),
     [boltColor]
-);
+  );
   //truck material:
   // using the normal map for the bumpyfeel. basically handling how the light hits it,normalmap-online page shows nicely how it works kinds
   const metalNormal = useTexture("/skateboard/metal-normal.avif");

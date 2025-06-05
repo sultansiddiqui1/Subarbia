@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Bowlby_One_SC, DM_Mono } from "next/font/google";
 import "./globals.css";
 
-import { Header } from "@/components/Header";
 import { SVGFilters } from "@/components/SVGFilters";
-import { Footer } from "@/components/Footer";
 import { createClient } from "@/prismicio";
 
 const bowlby = Bowlby_One_SC({
